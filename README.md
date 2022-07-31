@@ -1,6 +1,6 @@
 # Blog Page
 
-Simple blog page using Node.js, Express, MongoDB & Bootstrap.
+Simple blog page using Express.js, MongoDB & Bootstrap.
 
 ## Demo
 
