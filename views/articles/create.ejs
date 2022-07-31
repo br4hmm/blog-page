@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <div class="container">
+      <h1 class="mt-2 mb-4">Edit Article</h1>
+      <form action="/articles" method="post"><%- include('../partials/form-fields.ejs') %></form>
+    </div>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

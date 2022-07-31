@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <div class="container">
+      <h1 class="mt-2 mb-4">Article Details</h1>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h4 class="card-title"><%= article.title %></h4>
+          <div class="card-subtitle text-muted mb-2"><%= article.createdAt.toLocaleDateString() %></div>
+          <div class="card-text lead mb-2"><%= article.description %></div>
+          <div class="card-text mb-2"><%= article.body %></div>
+        </div>
+      </div>
+      <a href="/" class="btn btn-primary mt-3">Home Page</a>
+      <a data-doc="<%= article._id %>" class="btn btn-danger mt-3">Delete</a>
+    </div>
+
+    <%- include('../partials/footer.ejs') %>
+
+    <script>
+      const delbtn = document.querySelector('a.btn-danger');
+      const endpoint = `/articles/${delbtn.dataset.doc}`;
+
+      delbtn.addEventListener('click', () => {
+        fetch(endpoint, { method: 'delete' })
+          .then(result => result.json())
+          .then(data => (window.location.href = data.redirect))
+          .catc(err => console.log(err));
+      });
+    </script>
+  </body>
+</html>

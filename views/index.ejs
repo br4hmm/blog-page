@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <div class="container">
+      <h1 class="mt-2 mb-4">Blog Page</h1>
+      <a href="/articles/create" class="btn btn-success">New Article</a>
+      <% articles.forEach((article) => { %>
+      <div class="card mt-4">
+        <div class="card-body">
+          <h4 class="card-title"><%= article.title %></h4>
+          <div class="card-subtitle text-muted mb-2"><%= article.createdAt.toLocaleDateString() %></div>
+          <div class="card-text mb-2"><%= article.description %></div>
+          <a href="/articles/<%= article._id %>" class="btn btn-outline-primary">Read more</a>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
