@@ -1,7 +1,7 @@
 {
   "name": "blog-page",
   "version": "1.0.0",
-  "description": "Simple blog page using Express.js & MongoDB",
+  "description": "Simple blog page using Express.js, MongoDB & Bootstrap",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
