@@ -27,7 +27,7 @@ $ cd blog-page
 $ npm install
 ```
 
-3- Edit `.env.example` values and rename it to `.env`
+3- Add your MongoDB connection string in `.env.example` and rename the file to `.env`
 
 4- Start the server
 
